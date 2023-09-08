@@ -178,4 +178,24 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 480px) {
+    
+    .chat-header 
+    {
+      .user-details 
+      {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .avatar 
+        {
+          img 
+          {
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
 `;

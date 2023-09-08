@@ -12,8 +12,8 @@ module.exports.login = async (req, res, next) => {
       return res.json({ msg: "Incorrect Username or Password", status: false });
     delete user.password;
     return res.json({ status: true, user });
-  } catch (ex) {
-    next(ex);
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -34,8 +34,8 @@ module.exports.register = async (req, res, next) => {
     });
     delete user.password;
     return res.json({ status: true, user });
-  } catch (ex) {
-    next(ex);
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -48,8 +48,8 @@ module.exports.getAllUsers = async (req, res, next) => {
       "_id",
     ]);
     return res.json(users);
-  } catch (ex) {
-    next(ex);
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -69,8 +69,8 @@ module.exports.setAvatar = async (req, res, next) => {
       isSet: userData.isAvatarImageSet,
       image: userData.avatarImage,
     });
-  } catch (ex) {
-    next(ex);
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -79,7 +79,7 @@ module.exports.logOut = (req, res, next) => {
     if (!req.params.id) return res.json({ msg: "User id is required " });
     onlineUsers.delete(req.params.id);
     return res.status(200).send();
-  } catch (ex) {
-    next(ex);
+  } catch (error) {
+    next(error);
   }
 };

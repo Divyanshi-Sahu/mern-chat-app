@@ -141,4 +141,33 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 480px) {
+    .button-container 
+    {
+      .emoji 
+      {
+        position: relative;
+        svg 
+        {
+          font-size: 1.5rem;
+          margin-left:-10px;
+        }
+      }
+    }  
+
+    .input-container {
+      width: 99%;
+      input 
+      {
+        font-size: 0.8rem;
+      }
+    button {
+      svg {
+        font-size: 1.5rem;
+        color: white;
+      }
+    }
+  }
+  }
 `;

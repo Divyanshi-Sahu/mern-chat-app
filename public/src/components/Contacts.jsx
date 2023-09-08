@@ -22,8 +22,7 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <h3>chatt-er-box</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -74,9 +73,6 @@ const Container = styled.div`
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    img {
-      height: 2rem;
-    }
     h3 {
       color: white;
       text-transform: uppercase;
@@ -100,11 +96,11 @@ const Container = styled.div`
       background-color: #ffffff34;
       min-height: 5rem;
       cursor: pointer;
-      width: 90%;
+      width: 100%;
       border-radius: 0.2rem;
       padding: 0.4rem;
       display: flex;
-      gap: 1rem;
+      gap: 0.4rem;
       align-items: center;
       transition: 0.5s ease-in-out;
       .avatar {
@@ -140,13 +136,54 @@ const Container = styled.div`
         color: white;
       }
     }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      gap: 0.5rem;
+    @media screen and (min-width: 480px) and (max-width: 720px) {
+      gap: 0.2rem;
+     
       .username {
         h2 {
-          font-size: 1rem;
+          font-size: 1rem;    
+        }
+      }
+
+      .brand {
+        h3 {
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+
+      .avatar {
+        img {
+          height: 2rem;
+          max-inline-size: 100%;
+        }
+      }
+
+      
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+        
+    .brand {
+      h3 {
+        color: white;
+        text-transform: uppercase;
+        font-size:0.8rem;
+      }
+    }
+    .contacts .contact{
+      .avatar {
+        img {
+          height: 2.5rem;
+        }
+      }
+      .username {
+        h3 {
+          color: white;
+          font-size:0.9rem
         }
       }
     }
-  }
+    }
 `;

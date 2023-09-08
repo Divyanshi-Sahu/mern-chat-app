@@ -33,7 +33,7 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   svg {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #ebe7ff;
   }
 `;

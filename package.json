@@ -1,9 +1,5 @@
 {
-"scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-     "build": "npm install --prefix frontend && npm run build --prefix frontend"
-  },  
+ 
   "dependencies": { 
     "bcrypt": "^5.1.1",
     "yarn": "^1.22.19"
